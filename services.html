@@ -53,22 +53,25 @@
                             <p>Custom websites and web applications built with React, Next.js, and the latest JavaScript frameworks. Clean, scalable code for fast and reliable performance.</p>
                         </div>
                         <div class="service-item mb-4">
-                            <div class="service-img-placeholder mb-3" style="width:80px;height:80px;background:#ecf0f1;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-                                <input type="file" accept="image/*" style="width:100%;height:100%;object-fit:cover;opacity:0.7;cursor:pointer;" title="Upload image for UI/UX Design" />
+                            <div class="service-img-placeholder mb-3" style="width:80px;height:80px;background:#ecf0f1;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;">
+                                <img src="" alt="Service Image" style="width:100%;height:100%;object-fit:cover;display:none;position:absolute;top:0;left:0;z-index:1;" />
+                                <input type="file" accept="image/*" style="width:100%;height:100%;opacity:0;cursor:pointer;position:absolute;top:0;left:0;z-index:2;" title="Upload image for UI/UX Design" onchange="previewServiceImage(this)" />
                             </div>
                             <h4>UI/UX Design</h4>
                             <p>Beautiful, intuitive interfaces designed for optimal user experience. I combine creativity with usability to deliver designs that engage and convert.</p>
                         </div>
                         <div class="service-item mb-4">
-                            <div class="service-img-placeholder mb-3" style="width:80px;height:80px;background:#ecf0f1;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-                                <input type="file" accept="image/*" style="width:100%;height:100%;object-fit:cover;opacity:0.7;cursor:pointer;" title="Upload image for Responsive Design" />
+                            <div class="service-img-placeholder mb-3" style="width:80px;height:80px;background:#ecf0f1;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;">
+                                <img src="img/frontend-1.jpg" alt="Service Image" style="width:100%;height:100%;object-fit:cover;display:none;position:absolute;top:0;left:0;z-index:1;" />
+                                <input type="file" accept="image/*" style="width:100%;height:100%;opacity:0;cursor:pointer;position:absolute;top:0;left:0;z-index:2;" title="Upload image for Responsive Design" onchange="previewServiceImage(this)" />
                             </div>
                             <h4>Responsive Design</h4>
                             <p>Websites that look and work perfectly on any device. Mobile-first, cross-browser compatibility is always a priority.</p>
                         </div>
                         <div class="service-item mb-4">
-                            <div class="service-img-placeholder mb-3" style="width:80px;height:80px;background:#ecf0f1;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-                                <input type="file" accept="image/*" style="width:100%;height:100%;object-fit:cover;opacity:0.7;cursor:pointer;" title="Upload image for Frontend Consulting" />
+                            <div class="service-img-placeholder mb-3" style="width:80px;height:80px;background:#ecf0f1;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;">
+                                <img src="" alt="Service Image" style="width:100%;height:100%;object-fit:cover;display:none;position:absolute;top:0;left:0;z-index:1;" />
+                                <input type="file" accept="image/*" style="width:100%;height:100%;opacity:0;cursor:pointer;position:absolute;top:0;left:0;z-index:2;" title="Upload image for Frontend Consulting" onchange="previewServiceImage(this)" />
                             </div>
                             <h4>Frontend Consulting</h4>
                             <p>Expert advice on best practices, performance optimization, and technology selection for your next project.</p>
@@ -155,6 +158,20 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+      function previewServiceImage(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          var container = input.parentElement;
+          var img = container.querySelector('img');
+          reader.onload = function(e) {
+            img.src = e.target.result;
+            img.style.display = 'block';
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
 </body>
 
 </html>
