@@ -389,4 +389,13 @@ body {
   .section-title {
     font-size: 2rem;
   }
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .hero-buttons .flat-rounded-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
