@@ -307,6 +307,13 @@ img {
   box-shadow: var(--box-shadow);
 }
 
+.thumbnail-img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
 /* Footer Styles */
 .footer {
   background-color: var(--secondary-color);
