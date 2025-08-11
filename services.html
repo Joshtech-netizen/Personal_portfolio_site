@@ -46,51 +46,57 @@
                 <div class="col-md-6">
                     <h1 class="display-4">Services</h1>
                     <h2 class="text-muted mb-4">What I Offer</h2>
-                    <p class="lead">Empowering brands and individuals with modern, high-quality web solutions tailored to your needs.</p>
+                    <p class="lead">Empowering brands and individuals with modern, high-quality web solutions tailored
+                        to your needs.</p>
                     <div class="services-content mt-4">
                         <div class="service-item mb-4">
                             <h4>Web Development</h4>
-                            <p>Custom websites and web applications built with React, Next.js, and the latest JavaScript frameworks. Clean, scalable code for fast and reliable performance.</p>
+                            <p>Custom websites and web applications built with React, Next.js, and the latest JavaScript
+                                frameworks. Clean, scalable code for fast and reliable performance.</p>
                         </div>
                         <div class="service-item mb-4">
                             <div class="service-img-placeholder mb-3">
-                                <img src="" alt="Service Image" class="service-img-preview"/>
+                                <img src="img/front-end.jpg" alt="Service Image" class="service-img-preview thumbnail-img" />
                             </div>
-                            <h4>UI/UX Design</h4>
-                            <p>Beautiful, intuitive interfaces designed for optimal user experience. I combine creativity with usability to deliver designs that engage and convert.</p>
                         </div>
-                        <div class="service-item mb-4">
-                            <div class="service-img-placeholder mb-3">
-                                <img src="img/frontend-1.jpg" alt="Service Image" class="service-img-preview" />
-                            </div>
-                            <h4>Responsive Design</h4>
-                            <p>Websites that look and work perfectly on any device. Mobile-first, cross-browser compatibility is always a priority.</p>
-                        </div>
-                        <div class="service-item mb-4">
-                            <div class="service-img-placeholder mb-3">
-                                <img src="" alt="Service Image" class="service-img-preview" />
-                            </div>
-                            <h4>Frontend Consulting</h4>
-                            <p>Expert advice on best practices, performance optimization, and technology selection for your next project.</p>
-                        </div>
+                        <h4>UI/UX Design</h4>
+                        <p>Beautiful, intuitive interfaces designed for optimal user experience. I combine creativity
+                            with usability to deliver designs that engage and convert.</p>
                     </div>
-                    <div class="skills-section mt-5">
-                        <h3>Technologies & Tools</h3>
-                        <div class="skills-list">
-                            <span class="skill-badge">HTML5</span>
-                            <span class="skill-badge">CSS3</span>
-                            <span class="skill-badge">JavaScript (ES6+)</span>
-                            <span class="skill-badge">React.js</span>
-                            <span class="skill-badge">Next.js</span>
-                            <span class="skill-badge">Tailwind CSS</span>
-                            <span class="skill-badge">Bootstrap</span>
-                            <span class="skill-badge">Git</span>
-                            <span class="skill-badge">Figma</span>
-                            <span class="skill-badge">UI/UX Principles</span>
+                    <div class="service-item mb-4">
+                        <div class="service-img-placeholder mb-3">
+                            <img src="img/frontend-1.jpg" alt="Service Image" class="service-img-preview" />
                         </div>
+                        <h4>Responsive Design</h4>
+                        <p>Websites that look and work perfectly on any device. Mobile-first, cross-browser
+                            compatibility is always a priority.</p>
                     </div>
-                    <a href="contact.html" class="btn btn-primary mt-4">Let's Work Together</a>
+                    <div class="service-item mb-4">
+                        <div class="service-img-placeholder mb-3">
+                            <img src="" alt="Service Image" class="service-img-preview" />
+                        </div>
+                        <h4>Frontend Consulting</h4>
+                        <p>Expert advice on best practices, performance optimization, and technology selection for your
+                            next project.</p>
+                    </div>
                 </div>
+                <div class="skills-section mt-5">
+                    <h3>Technologies & Tools</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">JavaScript (ES6+)</span>
+                        <span class="skill-badge">React.js</span>
+                        <span class="skill-badge">Next.js</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">Bootstrap</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Figma</span>
+                        <span class="skill-badge">UI/UX Principles</span>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary mt-4">Let's Work Together</a>
+            </div>
             </div>
         </section>
     </main>
@@ -156,18 +162,18 @@
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <script>
-      function previewServiceImage(input) {
-        if (input.files && input.files[0]) {
-          var reader = new FileReader();
-          var container = input.parentElement;
-          var img = container.querySelector('img');
-          reader.onload = function(e) {
-            img.src = e.target.result;
-            img.style.display = 'block';
-          };
-          reader.readAsDataURL(input.files[0]);
+        function previewServiceImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                var container = input.parentElement;
+                var img = container.querySelector('img');
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
         }
-      }
     </script>
 </body>
 
