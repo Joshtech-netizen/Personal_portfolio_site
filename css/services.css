@@ -65,7 +65,7 @@ body {
 }
 
 .logo-icon {
-   width: 125px;
+  width: 125px;
   height: 50px;
   background: none;
   border-radius: 12px;
@@ -192,8 +192,10 @@ img {
 }
 
 .logo-image {
-  height: 40px;
+  height: 45px;
   width: auto;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .nav-pills {
@@ -214,23 +216,39 @@ img {
   background-color: var(--primary-color);
 }
 
+/*Hamburger Meu Toogle*/
 .menu-toggle {
-  display: none;
+  display: flex;
+}
+
+.menu-toggle {
   flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .menu-toggle span {
-  display: block;
+  width: 25px;
   height: 3px;
-  width: 100%;
-  background-color: var(--secondary-color);
-  border-radius: 3px;
+  background: white;
+  background: -var(--white, white);
+  margin: 3px 0;
   transition: var(--transition);
+  border-radius: 3px;
 }
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 /* About Section */
 .services-section {
@@ -381,48 +399,32 @@ img {
     left: 0;
   }
 
-  .menu-toggle {
-    display: flex;
+  @media (max-width: 768px) {
+    .services-section .row {
+      flex-direction: column-reverse;
+    }
+
+    .services-section .col-md-6 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .skills-list {
+      justify-content: center;
+    }
+
+    .footer .row>div {
+      margin-bottom: 2rem;
+    }
   }
 
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
+  @media (max-width: 576px) {
+    .display-4 {
+      font-size: 2rem;
+    }
 
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
-
-@media (max-width: 768px) {
-  .services-section .row {
-    flex-direction: column-reverse;
-  }
-
-  .services-section .col-md-6 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .skills-list {
-    justify-content: center;
-  }
-
-  .footer .row>div {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .display-4 {
-    font-size: 2rem;
-  }
-
-  .lead {
-    font-size: 1.1rem;
+    .lead {
+      font-size: 1.1rem;
+    }
   }
 }
