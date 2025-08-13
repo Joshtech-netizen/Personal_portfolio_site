@@ -216,11 +216,7 @@ img {
   background-color: var(--primary-color);
 }
 
-/*Hamburger Meu Toogle*/
-.menu-toggle {
-  display: flex;
-}
-
+/*Hamburger Menu Toogle*/
 .menu-toggle {
   flex-direction: column;
   cursor: pointer;
@@ -398,6 +394,10 @@ img {
   .nav-pills.active {
     left: 0;
   }
+
+  .menu-toggle {
+  display: flex;
+}
 
   @media (max-width: 768px) {
     .services-section .row {
